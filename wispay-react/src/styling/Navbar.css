@@ -1,46 +1,94 @@
 /* Navbar.css */
 .navbar {
-    background-color: #041179;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    color: white;
-    font-family: sans-serif;
-  }
-  
-  .navbar-content-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-content-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .navbar-logo {
-    height: 35px;
-    margin-right: 15px;
-  }
-  
-  .navbar-title {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-right: 8px;
-    white-space: nowrap;
-  }
-  
-  .navbar-dropdown-arrow {
-    font-size: 0.8rem;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .navbar-user-icon {
-    font-size: 1.8rem; 
-    color: white;      
-    cursor: pointer;    
-    margin-left: 15px; 
-  }
+  background-color: #041179;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.navbar-content-left {
+  display: flex;
+  align-items: center;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.navbar-content-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 35px;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.navbar-dropdown-arrow {
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 5px;
+  user-select: none;
+}
+
+.navbar-user-icon {
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* Dropdown Menu Styles */
+.navbar-dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  margin-top: 8px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 200px;
+}
+
+/* Style for the dropdown title */
+.navbar-dropdown-title {
+  padding: 8px 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+.navbar-dropdown-menu li a {
+  display: block;
+  padding: 8px 18px 8px 25px; /* Increased left padding (from 15px to 25px) */
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.navbar-dropdown-menu li a:hover {
+  background-color: #c2c2c2;
+  color: #041179;
+}

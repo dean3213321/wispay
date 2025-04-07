@@ -52,7 +52,6 @@ function Navbar() {
 
         {isDropdownOpen && (
           <div ref={dropdownRef} className="navbar-dropdown-menu">
-             {/* Add the title here */}
             <div className="navbar-dropdown-title">Modules</div>
             <ul>
               <li><a href="#payment">Payment</a></li>

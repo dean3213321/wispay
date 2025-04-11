@@ -57,7 +57,7 @@ function Navbar() {
               <li><a href="#payment">Payment</a></li>
               <li><a href="#products">Products</a></li>
               <li><a href="#reports">Reports</a></li>
-              <li><a href="#students">Students</a></li>
+              <li><a href="students">Students</a></li>
               <li><a href="#employees">Employees</a></li>
             </ul>
           </div>

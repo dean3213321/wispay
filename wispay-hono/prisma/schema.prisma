@@ -21,3 +21,69 @@ model wispay {
   product_name String   @db.VarChar(255)
   quantity     Float    @db.Float
 }
+
+model products {
+  id               Int      @id @default(autoincrement())
+  product_code     String   @db.VarChar(255)
+  type_of_product  String   @db.VarChar(255)
+  name_of_product  String   @db.VarChar(255)
+  price_of_product Float    @db.Float
+  date_created     DateTime @db.DateTime(0)
+  last_touch       String   @db.VarChar(25)
+}
+
+model type_of_products {
+  id   Int    @id @default(autoincrement())
+  name String @db.VarChar(255)
+}
+
+model user {
+  id             Int      @id @default(autoincrement())
+  rfid           BigInt
+  fname          String   @db.MediumText
+  mname          String   @db.MediumText
+  lname          String   @db.MediumText
+  type           String   @db.VarChar(255)
+  gender         String   @db.Text
+  position       String   @db.MediumText
+  grade          String   @db.Text
+  section        String   @db.Text
+  dob            DateTime @db.Date
+  email          String   @db.MediumText
+  mobile         String   @db.MediumText
+  vacchist       String   @db.MediumText
+  photo          String   @db.MediumText
+  manager        String   @db.Text
+  isactive       Int
+  is_situation   String   @db.VarChar(255)
+  username       String   @db.Text
+  password       String   @db.Text
+  level          Int
+  status         Int
+  prevsch        String   @db.Text
+  prevschcountry String   @db.Text
+  lrn            String   @db.Text
+  uniqid         String   @db.Text
+  tf             String   @db.Text
+  country        String   @db.Text
+  nationality    String   @db.Text
+  nationalities  String   @db.VarChar(255)
+  guardianname   String   @db.Text
+  guardianemail  String   @db.Text
+  guardianphone  String   @db.Text
+  referral       String   @db.Text
+  apptype        String   @db.Text
+  sy             String   @db.Text
+  strand         String   @db.Text
+  religion       String   @db.Text
+  visa           String   @db.Text
+  earlybird      Int
+  modelrelease   Int
+  feepolicy      Int
+  refund         Int
+  tos            Int
+  empno          String   @db.Text
+  isESL          Int
+  house          String   @db.VarChar(255)
+  isofficial     Int
+}

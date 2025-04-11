@@ -1,0 +1,16 @@
+GET  http://localhost:3000/api/students
+
+###
+
+GET http://localhost:3000/api/studentsTransactions?rfid=2514811928
+
+
+###
+POST http://localhost:3000/api/studentsCredits
+Content-Type: application/json
+
+{
+  "rfid": "2477653898",
+  "amount": "100.00",
+  "processedBy": "ICT Dept"
+}
